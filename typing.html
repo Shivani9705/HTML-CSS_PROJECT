@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333;
+            padding-top: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #fff;
+            overflow: hidden;
+            margin: 0 auto;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            letter-spacing: .15rem;
+            animation: typing 3.5s steps(30, end), blink-text .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-text {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This is my website</h1>
+    </div>
+</body>
+
+</html>

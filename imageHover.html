@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cards {
+            border: 2px solid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 10px 10px;
+        }
+
+        .cards .card {
+            width: 100%;
+            margin: 2px;
+            position: relative;
+        }
+
+        .cards .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        .cards .content::before,
+        .cards .content::after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .cards .content::before {
+            top: -20%;
+        }
+
+        .cards .content::after {
+            bottom: -20%;
+        }
+
+        .cards .card:hover .content::before {
+            top: 0.3%;
+            opacity: 1;
+        }
+
+        .cards .card:hover .content::after {
+            bottom: 0.3%;
+            opacity: 1;
+        }
+
+        .cards .card .box-content {
+            width: 100%;
+            height: 45px;
+            position: absolute;
+            color: #fff;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            transform: rotate(90deg);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .cards .card:hover .box-content {
+            opacity: 1;
+            transform: rotate(0deg);
+        }
+
+        .cards .card img {
+            width: 100%;
+        }
+
+        @media only screen and (min-width:768px) {
+            .cards .card {
+                width: 40%;
+            }
+        }
+
+        @media only screen and (min-width:1200px) {
+            .cards .card {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <div class="content">
+                <div class="box-content">
+                    <h4>Balloon</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non minus quam quaerat nemo. Corrupti,
+                        perspiciatis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <div class="content">
+                <div class="box-content">
+                    <h4>Balloon</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non minus quam quaerat nemo. Corrupti,
+                        perspiciatis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <div class="content">
+                <div class="box-content">
+                    <h4>Balloon</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non minus quam quaerat nemo. Corrupti,
+                        perspiciatis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <div class="content">
+                <div class="box-content">
+                    <h4>Balloon</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non minus quam quaerat nemo. Corrupti,
+                        perspiciatis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

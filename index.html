@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c49906b727.js" crossorigin="anonymous"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .home{
+            height: 80vh;
+            background:linear-gradient(rgba(0,0,40,0.5),rgba(0,0,40,0.5)) ,url('./img/home-slider-1-slide-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .home .content{
+            color: #fff;
+        }
+        .home .content button{
+            padding: 20px 60px;
+            margin: 20px 0;
+            background-color: orange;
+            border: none;
+            font-size: 15px;
+        }
+
+        /* homepage end  */
+        .about{
+            padding: 10px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .about .first h1{
+            margin: 10px 0;
+
+        }
+        .about .first p{
+            color: gray;
+        }
+        .about .first h4{
+            margin: 10px 0;
+        }
+        .about .first .line{
+            background: linear-gradient(to right,orange 60%,grey 40%);
+            height: 3px;
+        }
+        .about .second img{
+            width: 100%;
+            display: none;
+        }
+
+
+        .services{
+            background-image:linear-gradient(rgba(0,0,40,0.6),rgba(0,0,40,0.6)) ,url('./img/clients-parallax-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 10px 10px;
+        }
+        .services h1, .services h2{
+            color: white;
+        }
+        .services .first{
+            text-align: center;
+        }
+        .services p{
+            color: rgb(141, 141, 141);
+            font-size: 18px;
+        }
+        .services .second{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .services .second .card{
+            margin: 15px 0;
+        }
+        .services .second .card i{
+            color: orange;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .services .first .line{
+            width: 100%;
+            height: 3px;
+            /* background-color: brown; */
+            background: linear-gradient(to right ,orange 60%,grey 40%);
+        }
+
+        /* serviices end  */
+        .mission{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 10px;
+        }
+        .mission .first .box{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 10px;
+        }
+        .mission .first .box .icon{
+            margin: 0 20px;
+            color: rgb(230, 183, 98);
+        }
+        .mission .first .box .content p{
+            color: gray;
+            font-size: 20px;
+        }
+        .mission .second{
+            /* border: 2px solid; */
+        }
+        .mission .second img{
+            margin: 20px;
+            width: 100%;
+        }
+        /* mission end  */
+        .clients{
+            border: 2px solid;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 10px;
+            justify-content: space-between;
+        }
+        .clients .second{
+            border: 2px solid;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 10px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            /* height: 100Vh; */
+            /* margin: auto; */
+        }
+        /* clients end  */
+
+        .trainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .footer{
+            background-color:rgb(5,5,33);
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px 10px;
+        }
+        .footer p{
+            color: grey;
+           
+        }
+        .footer .post{
+            margin: 20px 0;
+        }
+        .footer .post .box{
+           display: flex;
+           justify-content: space-between;
+        }
+        .footer .post .box .image{
+            margin: 0 10px;
+        }
+        .footer .post .box .content p{
+            color: #fff;
+        }
+        .footer .post .box .content p span{
+            color: gray;
+        }
+
+        .footer .link{
+            margin: 20px 0;
+            display: flex;
+            
+        }
+        .footer .links ul{
+            list-style: none;
+            margin: 0 10px;
+            
+        }
+        .footer .contact p{
+            margin: 20px 0;
+        }
+
+
+        
+
+
+        @media only screen and (min-width:768px)
+        {
+            .services .second .card{
+                width: 50%;
+            }
+            .about{
+                align-items: center;
+                justify-content: center;
+            }
+            .about .first{
+                width: 50%;
+                /* margin: auto; */
+            
+            }
+            .clients .second{
+             flex-direction: row;
+            }
+            .footer .first{
+                width: 50%;
+            }
+            .footer .post{
+                width: 50%;
+            }
+            .footer .links{
+                width: 50%;
+            }
+            .footer .contact{
+                width: 50%;
+            }
+        }
+        @media only screen and (min-width:1024px)
+        {
+            .services .second .card{
+                width: 30%;
+            }
+            .about{
+                display: grid;
+            }
+            .about .first{
+               float: left;
+            }
+            .about .second{
+                width: 50%;
+            }
+                .about .second img{
+                display:block;
+        }
+        .mission .first{
+            width: 50%;
+        }
+         .mission .second
+         {
+            width: 40%;
+         }
+         .clients .first{
+            width: 30%;
+         }
+         .clients .second
+         {
+            width: 60%;
+         }
+    }
+    @media only screen and (min-width:1200px)
+    {
+        .about {
+        display: flex;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="content">
+            <h1>
+                Manage Your <br>Investment <br>Easily and Effectively
+            </h1>
+            <button>Get A Quote</button>
+        </div>
+        
+    </div>
+    <div class="about">
+        <div class="first">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eos doloribus aut officiis eum explicabo itaque molestiae ullam iure maiores.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci praesentium delectus magnam laudantium iure, omnis reprehenderit maxime magni veniam error.</p>
+            <h4>Wealth Management</h4>
+            <div class="line"></div>
+            <h4>Business Owner</h4>
+            <div class="line"></div>
+            <h4>Insurance</h4>
+            <div class="line"></div>
+            <h4>Wealth Management</h4>
+            <div class="line"></div>
+        </div>
+        <div class="second">
+            <img src="./img/about-2-446x608.png" alt="">
+        </div>
+       
+    </div>
+
+    <div class="services">
+        <div class="first">
+            <h1>Our Services</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium ea placeat culpa doloremque maxime ipsam aspernatur impedit, vero consectetur iste? Minus ullam illum quisquam aliquam sunt animi est neque delectus.</p>
+            <!-- <div class="line"></div> -->
+        </div>
+        <div class="second">
+            <div class="card">
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+                
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h2>PERSONAL TRAINING</h2>
+                <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad animi labore quibusdam amet odio molestias aliquam et doloribus asperiores corrupti?</P>
+            </div>
+        </div>
+    </div>
+    <!-- services page end -->
+
+    <div class="mission">
+        
+        <div class="first">
+            <h1>We Are Different</h1>
+            <div class="box">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>
+                </div>
+                <div class="content">
+                    <h4>Economic of scale</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque pariatur, aut ratione nostrum deleniti voluptas ipsam vero labore quos explicabo impedit eligendi corporis. Impedit voluptates ipsa tempora aliquam numquam?</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>
+                </div>
+                <div class="content">
+                    <h4>Economic of scale</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque pariatur, aut ratione nostrum deleniti voluptas ipsam vero labore quos explicabo impedit eligendi corporis. Impedit voluptates ipsa tempora aliquam numquam?</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>
+                </div>
+                <div class="content">
+                    <h4>Economic of scale</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque pariatur, aut ratione nostrum deleniti voluptas ipsam vero labore quos explicabo impedit eligendi corporis. Impedit voluptates ipsa tempora aliquam numquam?</p>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <h1>Our Mission</h1>
+            <img src="./img/team-15-246x250.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- mission page end  -->
+    <div class="clients">
+        <div class="first">
+            <h1>Our clients</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ratione debitis deleniti consequuntur nesciunt temporibus accusantium numquam perspiciatis architecto vero omnis voluptatibus porro excepturi, aperiam dolorem mollitia unde odit fugit?</p>
+        </div>
+        <div class="second">
+            <img src="./img/clients-3-132x83.png" alt="">
+            <img src="./img/clients-4-134x77.png" alt="">
+            <img src="./img/clients-5-141x88.png" alt="">
+            <img src="./img/clients-6-152x64.png" alt="">
+        </div>
+    </div>
+    <!-- clients end  -->
+    <h1>Our Trainer</h1>
+    <div class="trainer">
+        
+        <div class="box">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <h5>Amanda Smith</h5>
+            <p>Business Expert</p>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <h5>Amanda Smith</h5>
+            <p>Business Expert</p>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <h5>Amanda Smith</h5>
+            <p>Business Expert</p>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./img/team-13-246x250.jpg" alt="">
+            <h5>Amanda Smith</h5>
+            <p>Business Expert</p>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                    <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="first">
+            <div class="logo">
+                <img src="./img/logo-230x49.png" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur similique qui, ex expedita repellat ea facilis aspernatur, consequuntur molestias ducimus repellendus recusandae assumenda tempora quos error eveniet at? Doloribus, eaque.</p>
+            <h4>Free Consultation</h4>
+        </div>
+         <div class="post">
+            <h1>RECENT POST</h1>
+            <div class="box">
+                <div class="image">
+                    <img src="./img/post-preview-1-70x70.jpg" alt="">
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint!
+                        <br> <span>feb 4 2018/3 Comments</span>
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./img/post-preview-1-70x70.jpg" alt="">
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sint!
+                        <br> <span>feb 4 2018/3 Comments</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+           <div class="links">
+            <h1>QUICK LINKS</h1>
+            <div class="link">
+                <ul>
+                    <li>Home </li>
+                    <li>Services </li>
+                    <li>Casers </li>
+                    <li>Blog </li>
+                </ul>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Appointments</li>
+                </ul>
+            </div>
+           
+           </div>
+         <!-- <hr> -->
+         <div class="contact">
+            <h1>Contact Us</h1>
+              <p>0123456789</p>
+              <p>demo@gmail.com</p>
+              <p>Your Adderess goes here</p>
+         </div>
+         
+    </div>
+</body>
+</html>

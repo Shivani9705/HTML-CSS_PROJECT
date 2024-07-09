@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 100px auto;
+            text-align: center;
+            font-size: 40px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        h1::before {
+            content: "";
+            background: #000;
+            width: 120px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: -2;
+        }
+
+        h1::after {
+            content: "";
+            background: #000;
+            width: 120px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: -2;
+        }
+
+        span {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- it is used to generate content at runtime dynamically with the ::before and ::after
+    pseudo elements, to insert generated content  -->
+    <h1><span>We are awesome</span></h1>
+</body>
+
+</html>

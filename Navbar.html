@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c49906b727.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: black;
+            color: #fff;
+            height: 20vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            position: fixed;
+        }
+
+        nav .logo {
+            color: #fff;
+            margin-left: 10px;
+            font-size: 30px;
+        }
+
+        nav ul li {
+            background-color: black;
+            color: #fff;
+            display: inline-block;
+            padding: 10px;
+            display: none;
+        }
+
+        ul li .dropdown ul li {
+            display: table;
+        }
+
+        ul li .dropdown {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Brand</div>
+        <label for="check" id="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" name="" id="check">
+
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>courses
+                <div class="dropdown">
+                    <ul>
+                        <li>Web development</li>
+                        <li>App development</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

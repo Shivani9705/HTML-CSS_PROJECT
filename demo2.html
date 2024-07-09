@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const ages = [23, 14, 12, 18, 45, 56, 78]
+        const age = ages.filter(check)
+        console.log(age)
+
+        function check(value) {
+            return value >= 18;
+        }
+
+        //map method
+        const val = [4, 9, 16, 25];
+        // const sq = val.map(Math.sqrt);
+        const sq = val.map((dosquare) => {
+            return dosquare * dosquare;
+        });
+        console.log(sq);
+
+        // function dosquare(value) {
+        //     return value * value
+        // }
+
+        // Array destructuring 
+
+        const number = [1, 2, 3, 4, 5, 6, 7];
+        const [a, b, ...c] = number;
+        console.log(c);
+
+        // set
+
+        const arr = new Set([1, 2, 2, 3, 34, 4, 5, 6, 6, 7, 8, 9, 9])
+
+        console.log(arr)
+    </script>
+</body>
+
+</html>
